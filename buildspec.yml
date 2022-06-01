@@ -20,7 +20,11 @@ build-matrix:
       # Optional: Use Custom Public ECR Image as container
       #image:
       #  - public.ecr.aws/your-namespace/image-name
-
+reports:
+  playwright-reports:
+    files:
+      - "results.xml"
+    file-format: "JUNITXML"
 phases:
   install:
     runtime-versions:
@@ -33,8 +37,3 @@ phases:
     commands:
       - npm install
       - PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml npx playwright test --reporter=junit
-  reports:
-    playwright-reports:
-      files:
-        - "results.xml"
-      file-format: "JUNITXML"
