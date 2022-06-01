@@ -22,6 +22,9 @@ build-matrix:
       #  - public.ecr.aws/your-namespace/image-name
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 14.18.1
   build:
     # Per https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-env-vars.html
     # use $CODEBUILD_INITIATOR as it provides the entity that started the build
