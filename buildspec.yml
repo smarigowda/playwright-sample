@@ -32,5 +32,4 @@ phases:
     # e.g. awsCodeBuild-cypress-kitchen-sink/AWSCodeBuild-a14fc8e3-b5d6-42f9-9067-345d48a8f0fd
     commands:
       - npm install &
-      - npx playwright test &
-      - curl https://ecom-yeti.staging.abcam.net/
+      - npx playwright test
