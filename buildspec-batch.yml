@@ -15,3 +15,8 @@ batch:
       env:
         variables:
           IMAGE: mcr.microsoft.com/playwright:v1.22.0-focal
+    - identifier: playwrighttestbatch3
+      buildspec: batch_build3.yml
+      env:
+        variables:
+          IMAGE: mcr.microsoft.com/playwright:v1.22.0-focal
