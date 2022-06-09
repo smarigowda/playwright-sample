@@ -1,0 +1,17 @@
+## buildspec
+version: 0.2
+
+## AWS CodeBuild Batch configuration
+batch:
+  fast-fail: false
+  build-list:
+    - identifier: playwrighttestbatch1
+      buildspec: batch_build1.yml
+      env:
+        variables:
+          IMAGE: mcr.microsoft.com/playwright:v1.22.0-focal
+    - identifier: playwrighttestbatch2
+      buildspec: batch_build2.yml
+      env:
+        variables:
+          IMAGE: mcr.microsoft.com/playwright:v1.22.0-focal
